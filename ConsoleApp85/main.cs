@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp85
+namespace FreshFactory
+
 {
-    internal partial class Program
+    internal partial class main
     {
         static void Main(string[] args)
         {

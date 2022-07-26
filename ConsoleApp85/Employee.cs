@@ -1,9 +1,8 @@
 ﻿using System;
 
-namespace ConsoleApp85
+namespace FreshFactory
 {
-    internal partial class Program
-    {
+  
         class Employee
         {
             private int id;
@@ -11,16 +10,20 @@ namespace ConsoleApp85
             private int age;
             private double salary;
             private double experince;
-
+            private char gender;
+            private bool IsManger;
             public Employee(){ }
 
-            public Employee(int id, string name, int age, double salary, double experince)
+            public Employee(int id, string name, int age, double salary, double experince,char gender,bool IsManger)
             {
                 this.id = id;
                 this.name = name;
                 this.age = age;
                 this.salary = salary;
-                this.experince = experince;
+                this.experince = experince; 
+                this.gender = gender;
+                this.IsManger = IsManger;
+                
 
             }
 
@@ -30,5 +33,5 @@ namespace ConsoleApp85
             }
 
         }
-    }
+    
 }
