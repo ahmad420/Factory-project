@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace FreshFactory
 {
-    internal class Order
+     class Order
     {
+        private Customer customer;
+
     }
 }

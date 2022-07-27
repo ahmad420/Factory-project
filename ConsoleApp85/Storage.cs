@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace FreshFactory
 {
-    internal class Storage
+    class Storage
     {
+        private string name;
+        private const int capastiy = 10000;
+        private Product[] products;
+
+        public Storage()
+        {
+           products = new Product[capastiy];
+        }
+        public string GetName()
+        {
+            return name;
+        }
+        public void SetName(string name)
+        {
+             this.name=name;
+        }
     }
 }

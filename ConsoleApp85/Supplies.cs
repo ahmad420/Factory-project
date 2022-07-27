@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FreshFactory
 {
-    internal class Supplies
+     class Supplies
     {
     }
 }

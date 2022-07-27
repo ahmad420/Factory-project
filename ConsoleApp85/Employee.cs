@@ -8,30 +8,41 @@ namespace FreshFactory
             private int id;
             private string name;
             private int age;
-            private double salary;
+            private double salaryPerHour;
+            private double hours;
             private double experince;
             private char gender;
             private bool IsManger;
-            public Employee(){ }
-
-            public Employee(int id, string name, int age, double salary, double experince,char gender,bool IsManger)
+            private static int employeeCounter;
+            public Employee(int id, string name,bool IsManger,double salaryPerHour)
             {
                 this.id = id;
                 this.name = name;
-                this.age = age;
-                this.salary = salary;
-                this.experince = experince; 
-                this.gender = gender;
-                this.IsManger = IsManger;
-                
-
+                this.IsManger = false;
+                this.salaryPerHour = salaryPerHour;
+                employeeCounter++;
             }
 
-            public void employeeSayHello()
+        public Double CalculateSalary()
+        {
+            double salary = hours * salaryPerHour;
+            return salary;
+        }
+        public void employeeSayHello()
             {
                 Console.WriteLine($"Hello my name is {this.name}.");
             }
+            public string GetEmployeePostion()
+              { 
+            return IsManger ? "Manger" : "Prodaction-Employee";
+             }
+                
+             public override string ToString() {
+                
+            return $"{name}:{id}\nage:{age}\ngender:{gender}\nposition:{GetEmployeePostion()}\nsalary:{CalculateSalary():F2}\nexperince:{experince}\n";
+              }
 
-        }
-    
+
+    }
+
 }
